@@ -1,0 +1,8 @@
+﻿@using WebApp.Helpers;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.CtrlTable(viewName: "vUsuarios", id: "tblUsuarios", title: "Lista de empleados",
+   columnsTitle: "Identificación,Primer nombre,Segundo nombre,Primer apellido,Segundo apellido,Rol", ColumnsDataName: "IDENTIFICACION,PRIMER_NOMBRE,SEGUNDO_NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,TIPO_CUENTA", onSelectFunction: "BindFields")

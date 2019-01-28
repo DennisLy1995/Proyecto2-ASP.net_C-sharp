@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="~/Content/Others/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Plantilla.css" rel="stylesheet" />
+    <script src="~/Scripts/Others/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/Others/bootstrap.min.js"></script>
+    <script src="~/Scripts/Others/jquery.dataTables.min.js"></script>
+    <link href="~/Content/Others/jquery.dataTables.min.css" rel="stylesheet" />
+ 
+
+</head>
+<body>
+    <header>
+        <div id="opcionesNavegador">
+            <span>@Html.ActionLink("Sign in", "vLogin", "Home")</span>
+            <span>@Html.ActionLink("Sign up", "vRegistrarUsuario", "Home")</span>
+
+        </div>
+        <div id="secondHeader">
+
+            <div id="secondHeader_icons">
+                @Html.CtrlHeaderBlock(FONT_AWESOME_TYPE: "home", NOMBRE: "Inicio")
+                @Html.CtrlHeaderBlock(FONT_AWESOME_TYPE: "search", NOMBRE: "Buscar")
+                <a href="cart.html"><div id="cart_text"><i class="fas fa-shopping-cart"></i> (0 items)</div></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="whole_content">
+            @RenderBody()
+        </div>
+
+
+    </main>
+
+    <footer></footer>
+    <script src="~/Scripts/Views/ControlActions.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</body>
+</html>

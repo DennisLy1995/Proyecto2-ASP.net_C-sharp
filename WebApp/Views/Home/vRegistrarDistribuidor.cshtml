@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "vRegistrarDistribuidor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/registrar-distribuidor.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vRegistrarDistribuidor.js"></script>
+<body>
+    <h2 class="bodyTitulo">Registrar Distribuidor</h2>
+    @Html.CtrlAlert()
+    <form id="frmRegistrarDistribuidor">
+
+        <div class="divZonaIzquierda">
+            @Html.CtrlInput(id: "txtCedula", type: "number", label: "Cédula de la empresa", columnDataName: "Cedula")
+            @Html.CtrlInput(id: "txtNombre", type: "text", label: "Nombre de la empresa", columnDataName: "Nombre")
+            @Html.CtrlInput(id: "txtTarifaBase", type: "number", label: "Tarifa base", columnDataName: "TarifaBase")
+        </div>
+        <div class="divZonaDerecha">
+            @Html.CtrlInput(id: "txtTarifaKm", type: "number", label: "Tarifa por km", columnDataName: "TarifaKm")
+            @Html.CtrlInput(id: "txtRango", type: "number", label: "Rango", columnDataName: "Rango")
+        </div>
+    </form>
+    <div class="divZonaAbajo">
+        @Html.CtrlButton(viewName: "vRegistrarDistribuidor", id: "btnRegistrar", label: "Registrar", onClickFunction: "ValidarInputs", buttonType: "primary")
+    </div>
+    @Html.CtrlButton(viewName: "vRegistrarDistribuidor", id: "btnAgregar", label: "Agregar usuario", onClickFunction: "AgregarUsuario", buttonType: "primary")
+</body>
+
+
+

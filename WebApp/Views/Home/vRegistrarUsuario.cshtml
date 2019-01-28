@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/vRegistrarUsuario.css" rel="stylesheet" />
+
+
+
+<div id="form_registrar_block">
+    <form id="frmRegistrarUsuarios" action="">
+
+        <div class="alert alert-dismissible div_hidden" id="show_message">
+            <span id="show_message_description"> </span>
+
+        </div>
+
+        <div class="form_registrar_float_left">
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtId", type: "cedula_nacional", label: "Identificación", columnDataName: "IDENTIFICACION")
+            </div>
+
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtEmail", type: "email", label: "Correo electrónico", columnDataName: "EMAIL")
+            </div>
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtPrimerApellido", type: "text", label: "Primer apellido (*)", columnDataName: "PRIMER_APELLIDO")
+            </div>
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtSegundoApellido", type: "text", label: "Segundo apellido", columnDataName: "SEGUNDO_APELLIDO")
+            </div>
+
+        </div>
+        <div class="form_registrar_float_right">
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtPrimerNombre", type: "text", label: "Primer nombre (*)", columnDataName: "PRIMER_NOMBRE")
+            </div>
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtSegundoNombre", type: "text", label: "Segundo nombre", columnDataName: "SEGUNDO_NOMBRE")
+            </div>
+
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtPrimerPW", type: "password", label: "Contraseña", columnDataName: "CONTRASENNA")
+            </div>
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtSegundaPW", type: "password", label: "Confirmar contraseña", columnDataName: "CONFIRMACION_CONTRASENNA")
+            </div>
+
+            <button type="button" id="btnSeleccionarImagen" class="btn btn-primary" style="margin-left: 5px; margin-right: 5px;">Subir identificación</button>
+
+
+        </div>
+
+        <input class="div_hidden" id="txtUrlImagen" type="text" disabled columndataname="URL_FOTO_ID" />
+
+
+    </form>
+
+</div>
+<div class="form_registrar_button">
+    @Html.CtrlButton(viewName: "vUsuarios", id: "btnRegistrar", label: "Registrar", onClickFunction: "RegistrarUsuario", buttonType: "success")
+
+</div>
+
+<div id="alert">
+    <div class="alert-contenedor">
+        <span class="alert-title">¡Hola!</span>
+        <span class="alert-message" id="alert_message"></span>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success  " role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progress_bar"></div>
+        </div>
+    </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+<script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="~/Scripts/Views/MD5.js"></script>
+<script src="~/Scripts/Views/vUsuarios.js"></script>
+<script src="~/Scripts/Views/UploadImage.js"></script>

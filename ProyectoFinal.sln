@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesPOJO", "EntidadesPOJO\EntidadesPOJO.csproj", "{4308465C-3FEB-4E69-AC1C-D71153D9B35D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D953439-EFEC-4E11-9739-F6D61A4DCE60}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{BE585C77-83ED-4F03-8429-85010470633D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{B9A8497F-3E95-4E0B-B251-0BEBD310368B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreApi", "CoreApi\CoreApi.csproj", "{78422E5F-1789-468D-A545-3610FB6DF913}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Entidades POJO", "1_Entidades POJO", "{F2B4D8AF-E79E-41B7-B6B4-A28868C955D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_AccesoDatos", "2_AccesoDatos", "{5E2D7A39-813A-44CD-9E32-9A9B95A7A30A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Excepciones", "3_Excepciones", "{AB6ECD9B-497E-4CCC-BE97-DEC9931493F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_API", "4_API", "{800C8F8E-1E9C-4411-A30B-790BDE47F2ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_WEB_APP", "5_WEB_APP", "{E8CF0B30-F90A-43A9-96F4-802161B9ECEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{FEB21055-95DF-413F-A08F-DA48B0B64973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{1D45618C-6423-4FA1-87CB-577337218FF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4308465C-3FEB-4E69-AC1C-D71153D9B35D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4308465C-3FEB-4E69-AC1C-D71153D9B35D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4308465C-3FEB-4E69-AC1C-D71153D9B35D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4308465C-3FEB-4E69-AC1C-D71153D9B35D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE585C77-83ED-4F03-8429-85010470633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE585C77-83ED-4F03-8429-85010470633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE585C77-83ED-4F03-8429-85010470633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE585C77-83ED-4F03-8429-85010470633D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A8497F-3E95-4E0B-B251-0BEBD310368B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A8497F-3E95-4E0B-B251-0BEBD310368B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A8497F-3E95-4E0B-B251-0BEBD310368B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A8497F-3E95-4E0B-B251-0BEBD310368B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78422E5F-1789-468D-A545-3610FB6DF913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78422E5F-1789-468D-A545-3610FB6DF913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78422E5F-1789-468D-A545-3610FB6DF913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78422E5F-1789-468D-A545-3610FB6DF913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB21055-95DF-413F-A08F-DA48B0B64973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB21055-95DF-413F-A08F-DA48B0B64973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB21055-95DF-413F-A08F-DA48B0B64973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB21055-95DF-413F-A08F-DA48B0B64973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D45618C-6423-4FA1-87CB-577337218FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D45618C-6423-4FA1-87CB-577337218FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D45618C-6423-4FA1-87CB-577337218FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D45618C-6423-4FA1-87CB-577337218FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4308465C-3FEB-4E69-AC1C-D71153D9B35D} = {F2B4D8AF-E79E-41B7-B6B4-A28868C955D5}
+		{BE585C77-83ED-4F03-8429-85010470633D} = {AB6ECD9B-497E-4CCC-BE97-DEC9931493F2}
+		{B9A8497F-3E95-4E0B-B251-0BEBD310368B} = {5E2D7A39-813A-44CD-9E32-9A9B95A7A30A}
+		{78422E5F-1789-468D-A545-3610FB6DF913} = {800C8F8E-1E9C-4411-A30B-790BDE47F2ED}
+		{FEB21055-95DF-413F-A08F-DA48B0B64973} = {E8CF0B30-F90A-43A9-96F4-802161B9ECEB}
+		{1D45618C-6423-4FA1-87CB-577337218FF5} = {800C8F8E-1E9C-4411-A30B-790BDE47F2ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39637145-7B11-481C-8345-4D70C464B9C8}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://evotekp.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AccesoDatos\\AccesoDatos.csproj
+		SccProjectTopLevelParentUniqueName1 = ProyectoFinal.sln
+		SccProjectName1 = AccesoDatos
+		SccLocalPath1 = AccesoDatos
+		SccProjectUniqueName2 = CoreApi\\CoreApi.csproj
+		SccProjectTopLevelParentUniqueName2 = ProyectoFinal.sln
+		SccProjectName2 = CoreApi
+		SccLocalPath2 = CoreApi
+		SccProjectUniqueName3 = EntidadesPOJO\\EntidadesPOJO.csproj
+		SccProjectTopLevelParentUniqueName3 = ProyectoFinal.sln
+		SccProjectName3 = EntidadesPOJO
+		SccLocalPath3 = EntidadesPOJO
+		SccProjectUniqueName4 = Excepciones\\Excepciones.csproj
+		SccProjectTopLevelParentUniqueName4 = ProyectoFinal.sln
+		SccProjectName4 = Excepciones
+		SccLocalPath4 = Excepciones
+		SccProjectUniqueName5 = WebApp\\WebApp.csproj
+		SccProjectTopLevelParentUniqueName5 = ProyectoFinal.sln
+		SccProjectName5 = WebApp
+		SccLocalPath5 = WebApp
+		SccProjectUniqueName6 = WebApi\\WebApi.csproj
+		SccProjectTopLevelParentUniqueName6 = ProyectoFinal.sln
+		SccProjectName6 = WebApi
+		SccLocalPath6 = WebApi
+	EndGlobalSection
+EndGlobal

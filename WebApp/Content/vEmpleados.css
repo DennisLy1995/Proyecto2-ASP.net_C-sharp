@@ -1,0 +1,80 @@
+﻿#titulo_pagina {
+    text-align: center;
+}
+
+.panel{
+    text-align: center;
+}
+
+#imagenId img {
+    width: 15%;
+}
+
+#form_editar_block {
+    padding: 15px;
+    width: 70%;
+    overflow: hidden;
+    text-align: center;
+}
+
+#form_modificar_block {
+    padding: 15px;
+    width: 70%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.new_input_editar label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.new_input_editar input {
+    margin-bottom: 10px;
+}
+
+.form_editar_float_left {
+    float: left;
+}
+
+.form_editar_float_right {
+    float: right;
+}
+
+.form_editar_button {
+    width: 100%;
+    text-align: center;
+}
+
+    .form_editar_button button {
+        margin-top: 57%;
+        margin-bottom: 30px;
+    }
+
+.form_modificar_float_left {
+    float: left;
+}
+
+.form_modificar_float_right {
+    float: right;
+}
+
+.form_modificar_button {
+    width: 100%;
+    text-align: center;
+}
+
+    .form_modificar_button button,a {
+        margin-top: 33%;
+        margin-bottom: 30px;
+    }
+
+.div_hidden {
+    display: none;
+}
+
+.oculto {
+    display: none;
+}

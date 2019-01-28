@@ -1,0 +1,73 @@
+﻿/*Centrar titulo*/
+h2 {
+    text-align: center;
+    margin-top: -2%;
+}
+
+/*Estilos del form*/
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+form {
+    margin-left: 16%;
+    margin-top: 3%;
+}
+/*Fin estilos del form*/
+
+/*Columna 1*/
+form #col1 {
+    float: left;
+}
+
+form #col1 label {
+    display: block;
+    text-align: center;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+form #col1 input {
+    margin-bottom: 10%;
+    width: 220px;
+}
+/*Fin columna 1*/
+
+/*Columna 2*/
+form #col2 {
+    float: right;
+    margin-right: 17%;
+    width: 24%;
+}
+
+form #col2 label {
+    display: block;
+    text-align: center;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+form #col2 input {
+    margin-bottom: 10%;
+    width: 220px;
+}
+
+form #col2 button {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background: #2C3E50;
+    margin-bottom: 22%;
+    margin-top: 20.8%;
+    width: 100%;
+     text-align:center;
+}
+/*Fin columna 2*/
+
+#accion {
+    margin-left: 46%;
+    margin-top: 43%;
+}
+

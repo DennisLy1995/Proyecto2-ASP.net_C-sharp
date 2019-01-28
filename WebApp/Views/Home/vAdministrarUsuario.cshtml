@@ -1,0 +1,25 @@
+﻿@using WebApp.Helpers;
+<script src="~/Scripts/Views/vUsuarios.js"></script>
+
+@{
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+
+<div id="desactivar_input">
+    <h4>Desactivar usuario</h4>
+    <form id="frmDesactivarUsuario">
+        <div>
+            @Html.CtrlInput(id: "txtId", type: "cedula_nacional", label: "Identificación", columnDataName: "IDENTIFICACION")
+
+        </div>
+    </form>
+   
+    @Html.CtrlButton(viewName: "vUsuarios", id: "btnDesactivar", label: "Desactivar", onClickFunction: "DesactivarUsuario", buttonType: "danger")
+
+</div>
+<br><br>
+<div id="tabla_usuarios">
+    @Html.CtrlTable(viewName: "vUsuarios", id: "tblUsuarios", title: "Lista de usuarios",
+       columnsTitle: "Identificación,Primer nombre,Segundo nombre,Primer apellido,Segundo apellido,Rol", ColumnsDataName: "IDENTIFICACION,PRIMER_NOMBRE,SEGUNDO_NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,TIPO_CUENTA", onSelectFunction: "BindFields")
+</div>

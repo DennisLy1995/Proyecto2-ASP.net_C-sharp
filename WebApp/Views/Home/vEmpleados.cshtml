@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/vEmpleados.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vEmpleados.js"></script>
+<script src="~/Scripts/Views/UploadImage.js"></script>
+
+<h3 id="titulo_pagina">Empleados</h3>
+<br />
+
+<div class="card-header">
+    <div class="panel row">
+        <div id="Registro" class="oculto">
+            @Html.CtrlButton(viewName: "vEmpleados", id: "btnRegistro", label: "Registro", onClickFunction: "MostrarRegistro", buttonType: "success")
+        </div>
+        <div id="Listar" class="oculto">
+            @Html.CtrlButton(viewName: "vEmpleados", id: "btnListar", label: "Lista", onClickFunction: "MostrarMostrarLista", buttonType: "info")
+        </div>
+    </div>
+</div>
+
+<div id="tabla_block" class="oculto">
+    @Html.CtrlTable(viewName: "vEmpleados", id: "tblEmpleados", title: "Lista de empleados",
+   columnsTitle: "Identificación,Primer nombre,Segundo nombre,Primer apellido,Segundo apellido,Correo Electrónico", 
+   ColumnsDataName: "IDENTIFICACION,PRIMER_NOMBRE,SEGUNDO_NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,EMAIL", onSelectFunction: "BindFields")
+</div>
+
+<div id="form_editar_block" class="oculto">
+    <div class="alert alert-dismissible div_hidden" id="show_message">
+        <span id="show_message_description"> </span>
+    </div>
+    <h5>Registro de empleados</h5>
+    <br />
+    <form id="frmEmpleados">
+        <section class="form_editar_float_left">
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtId", type: "cedula_nacional", label: "Identificación", columnDataName: "IDENTIFICACION")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtCorreo", type: "email", label: "Correo electrónico", columnDataName: "EMAIL")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtPApellido", type: "text", label: "Primer apellido (*)", columnDataName: "PRIMER_APELLIDO")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtSApellido", type: "text", label: "Segundo apellido", columnDataName: "SEGUNDO_APELLIDO")
+            </div>
+        </section>
+
+        <section class="form_editar_float_right">
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtPNombre", type: "text", label: "Primer nombre (*)", columnDataName: "PRIMER_NOMBRE")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtSNombre", type: "text", label: "Segundo nombre", columnDataName: "SEGUNDO_NOMBRE")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtContra1", type: "password", label: "Contraseña", columnDataName: "CONTRASENNA")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtContra2", type: "password", label: "Confirmar contraseña", columnDataName: "CONFIRMACION_CONTRASENNA")
+            </div>
+            <button type="button" id="btnSeleccionarImagen" class="btn btn-primary" style="margin-left: 5px; margin-right: 5px;">Subir identificación</button>
+        </section>
+
+        <input class="div_hidden" id="txtUrlImagen" type="text" disabled columndataname="URL_FOTO_ID" />
+    </form>
+
+    <section class="form_editar_button">
+        @Html.CtrlButton(viewName: "vEmpleados", id: "btnCreate", label: "Registrar", onClickFunction: "Create", buttonType: "success")
+    </section>
+</div>
+
+<div id="form_modificar_block" class="oculto">
+    <div class="alert alert-dismissible div_hidden" id="show_message">
+        <span id="show_message_description"> </span>
+    </div>
+    <h5>Modificación de datos</h5>
+    <br />
+    <div id="imagenId" class="img_float_left"></div>
+    <form id="frmModEmpleados">
+        <section class="form_modificar_float_left">
+            <div class="new_input_editar oculto" disabled>
+                @Html.CtrlInput(id: "txtModId", type: "cedula_nacional", label: "Identificación", columnDataName: "IDENTIFICACION")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtModPApellido", type: "text", label: "Primer apellido (*)", columnDataName: "PRIMER_APELLIDO")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtModSApellido", type: "text", label: "Segundo apellido", columnDataName: "SEGUNDO_APELLIDO")
+            </div>
+        </section>
+
+        <section class="form_modificar_float_right">
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtModPNombre", type: "text", label: "Primer nombre (*)", columnDataName: "PRIMER_NOMBRE")
+            </div>
+            <div class="new_input_editar">
+                @Html.CtrlInput(id: "txtModSNombre", type: "text", label: "Segundo nombre", columnDataName: "SEGUNDO_NOMBRE")
+            </div>
+            <button type="button" id="btnModSeleccionarImagen" class="btn btn-primary" style="margin-left: 5px; margin-right: 5px;">Subir identificación</button>
+        </section>
+
+        <section class="form_modificar_button">
+            @Html.CtrlButton(viewName: "vEmpleados", id: "btnUpdate", label: "Modificar", onClickFunction: "Update", buttonType: "success")
+            <a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#smallModal">Eliminar</a>
+        </section>
+
+        <input class="div_hidden" id="txtModUrlImagen" type="text" disabled columndataname="URL_FOTO_ID" />
+    </form>
+</div>
+
+<div id="alert">
+    <div class="alert-contenedor">
+        <span class="alert-title">¡Hola!</span>
+        <span class="alert-message" id="alert_message"></span>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success  " role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progress_bar"></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Eliminar empleado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>¿Desea eliminar al empleado?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                @Html.CtrlButton(viewName: "vEmpleados", id: "btnEliminar", label: "Eliminar", onClickFunction: "Delete", buttonType: "danger")
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+<script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>

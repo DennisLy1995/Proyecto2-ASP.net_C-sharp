@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "vRegistrarTiendaDistribuidor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Views/vRegistrarTiendaDistribuidor.js"></script>
+<link href="~/Content/registrarDistribuidorTienda.css" rel="stylesheet"/>
+<h2>Registrar distribuidor</h2>
+@Html.CtrlButton(viewName: "vRegistrarTiendaDistribuidor", id:"btnListo", label: "¡Listo! <i class='fas fa-chevron-right'></i>", onClickFunction: "Listo", buttonType: "success")
+<div class="clearfix"></div>
+<p class="lead">Seleccione los distribuidores de su tienda</p>
+
+<form id="frmRegistrarTiendaDistribuidor">
+    @Html.CtrlAlert()
+    <div class="divZonaIzquierdaIzquierda">
+        <input type="text" class="form-control" id="txtCedula" disabled placeholder="Cedula" columndataname="Cedula">
+    </div>
+    <div class="divZonaIzquierda">
+        <input type="text" class="form-control" id="txtNombre" disabled placeholder="Distribuidor" columndataname="Nombre">
+    </div>
+    @Html.CtrlButton(viewName: "vRegistrarTiendaDistribuidor", id: "btnRegistrar", label: "Registrar distribuidor", onClickFunction: "ValidarInputs")
+</form> 
+<div class="clearfix"></div>
+
+@Html.CtrlTable(viewName: "vRegistrarTiendaDistribuidor", id: "tbl_distribuidores", title: "Distribuidores",
+    columnsTitle: "Cedula,Nombre", ColumnsDataName: "Cedula,Nombre", onSelectFunction: "BindFields")
+

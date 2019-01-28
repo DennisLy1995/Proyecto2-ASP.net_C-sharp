@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/vCategoria.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vCategoria.js"></script>
+<script src="~/Scripts/Views/UploadImage.js"></script>
+
+@Html.CtrlTable(viewName: "vCategoria", id: "tblCategorias", title: "Lista de Categorias",
+    columnsTitle: "Codigo, Categoria, Tag", ColumnsDataName: "CODIGO,NOMBRE,TAG", onSelectFunction: "BindFields")
+
+
+<div id="form_registrar_block">
+    <div class="form_registrar_button">
+        @Html.CtrlButton(viewName: "vCategoria", id: "btnRegistrar", label: "Formulario", onClickFunction: "MostrarFormulario", buttonType: "success")
+        @Html.CtrlButton(viewName: "vCategoria", id: "btnModificar", label: "Registrar", onClickFunction: "RegistrarCategoria", buttonType: "success")
+    </div>
+
+    <form id="frmRegistrarCategoria" action="">
+
+        <div class="alert alert-dismissible div_hidden" id="show_message">
+            <span id="show_message_description"> </span>
+        </div>
+
+        <div class="form_registrar_float_left">
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtNombre", type: "text", label: "Nombre de la categoria:", columnDataName: "NOMBRE")
+            </div>
+        </div>
+
+        <div class="form_registrar_float_right">
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtTag", type: "text", label: "Tag de identificacion:", columnDataName: "TAG")
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+<script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>

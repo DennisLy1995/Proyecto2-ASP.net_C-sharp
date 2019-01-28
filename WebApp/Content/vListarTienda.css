@@ -1,0 +1,17 @@
+﻿#whole_content{
+    text-align: center;
+}
+
+#card-tienda {
+    display: inline-block;
+    margin: 3%;
+}
+
+.oculto{
+    display: none;
+}
+
+.ordenado {
+    display: inline-block;
+    margin: 2%;
+}

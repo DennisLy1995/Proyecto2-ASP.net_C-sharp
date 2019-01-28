@@ -1,0 +1,37 @@
+﻿.bodyTitulo{
+    text-align: center;
+}
+
+#frmRegistrarDistribuidor{
+    margin: 5%;
+}
+
+.divZonaIzquierda {
+    margin-left: 5%;
+    padding: 2%;
+    height: 15%;
+    width: 40%;
+    display: inline-block;
+}
+
+.divZonaDerecha {
+    margin-left: 5%;
+    padding: 2%;
+    width: 40%;
+    height: 15%;
+    display: inline-block;
+}
+
+.divZonaAbajo{
+    margin-bottom: 5%;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.div_mostrar {
+    display: block;
+}
+
+.div_ocultar {
+    display: none;
+}

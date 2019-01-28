@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+<script src="~/Scripts/Views/vPerfil.js"></script>
+
+<div id="profile_content_title">
+    Configurar mi perfil
+</div>
+<div id="profile_content_all">
+    <form id="frmModificarPerfil">
+        @Html.CtrlInput(id: "txtId", type: "cedula_nacional", label: "Identificación", columnDataName: "IDENTIFICACION")
+        @Html.CtrlInput(id: "txtPrimerNombre", type: "text", label: "Primer nombre (*)", columnDataName: "PRIMER_NOMBRE")
+        @Html.CtrlInput(id: "txtSegundoNombre", type: "text", label: "Segundo nombre", columnDataName: "SEGUNDO_NOMBRE")
+        @Html.CtrlInput(id: "txtPrimerApellido", type: "text", label: "Primer apellido (*)", columnDataName: "PRIMER_APELLIDO")
+        @Html.CtrlInput(id: "txtSegundoApellido", type: "text", label: "Segundo apellido", columnDataName: "SEGUNDO_APELLIDO")
+
+    </form>
+    @Html.CtrlButton(viewName: "vPerfil", id: "btnModificar", label: "Guardar cambios", onClickFunction: "RegistrarUsuario", buttonType: "success")
+
+</div>
+
+<div id="alert">
+    <div class="alert-contenedor">
+        <span class="alert-title">¡Hola!</span>
+        <span class="alert-message" id="alert_message">Estamos cargando tus datos personales.</span>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success  " role="progressbar" style="width: 0%" aria-valuenow="250" aria-valuemin="0" aria-valuemax="100" id="progress_bar"></div>
+        </div>
+    </div>
+</div>

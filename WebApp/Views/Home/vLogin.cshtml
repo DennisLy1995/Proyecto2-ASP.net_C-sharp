@@ -1,0 +1,32 @@
+﻿@using WebApp.Helpers;
+@{
+    Layout = "~/Views/Shared/_BasicLayout.cshtml";
+}
+<script src="~/Scripts/Views/ControlActions.js"></script>
+
+<script src="~/Scripts/Views/MD5.js"></script>
+<script src="~/Scripts/Views/vLogin.js"></script>
+<link href="~/Content/login.css" rel="stylesheet" />
+<div class="login_logo">
+</div>
+<section id="login_block">
+    <div id="login_form_block">
+        <form id="frmIniciarSesion" onsubmit="return false">
+            <div class="login_new_input">
+                <span><i class="fas fa-user"></i></span>
+                <input placeholder="Correo electrónico" class="mail" type="email" required="" id="txtEmail">
+            </div>
+
+            <div class="login_new_input">
+                <span><i class="fas fa-unlock"></i></span>
+                <input placeholder="Contraseña" type="password" required="" id="txtPassword">
+            </div>
+            <script>
+
+            </script>
+            <button class="button_style1" id="btnIniciarSesion">Iniciar sesión</button>
+
+        </form>
+    </div>
+    <a href="/Home"><button class="button_style1" id="go_back">Volver</button></a>
+</section>

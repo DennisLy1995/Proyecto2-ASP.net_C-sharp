@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "vModificarDistribuidor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/registrar-distribuidor.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vModificarDistribuidor.js" ></script>
+
+<h2>Modificar Distribuidor</h2>
+@Html.CtrlAlert()
+<form id="frmModificarDistribuidor">
+    <div class="divZonaIzquierda">
+        @Html.CtrlInput(id: "txtCedula", type: "number", label: "Cédula de la empresa", columnDataName: "Cedula")
+        @Html.CtrlInput(id: "txtNombre", type: "text", label: "Nombre de la empresa", columnDataName: "Nombre")
+        @Html.CtrlInput(id: "txtTarifaBase", type: "number", label: "Tarifa base", columnDataName: "TarifaBase")
+    </div>
+    <div class="divZonaDerecha">
+        @Html.CtrlInput(id: "txtTarifaKm", type: "number", label: "Tarifa por km", columnDataName: "TarifaKm")
+        @Html.CtrlInput(id: "txtRango", type: "number", label: "Rango", columnDataName: "Rango")
+    </div>
+</form>
+<div class="divZonaAbajo">
+    @Html.CtrlButton(viewName: "vModificarDistribuidor", id: "btnModificar", label: "Modificar", onClickFunction: "ValidarInputs", buttonType: "primary")
+</div>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78422E5F-1789-468D-A545-3610FB6DF913}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreApi</RootNamespace>
+    <AssemblyName>CoreApi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseManager.cs" />
+    <Compile Include="CategoriaFavoritaManager.cs" />
+    <Compile Include="EmpleadoManager.cs" />
+    <Compile Include="CorreoManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiendaManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{B9A8497F-3E95-4E0B-B251-0BEBD310368B}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesPOJO\EntidadesPOJO.csproj">
+      <Project>{4308465C-3FEB-4E69-AC1C-D71153D9B35D}</Project>
+      <Name>EntidadesPOJO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{BE585C77-83ED-4F03-8429-85010470633D}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+    <Compile Include="UsuarioManager.cs" />
+    <Compile Include="DistribuidorManager.cs" />
+    <Compile Include="InventarioManager.cs" />
+    <Compile Include="CategoriasManager.cs" />
+    <Compile Include="ProductosManager.cs" />
+    <Compile Include="OpcionListaManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{b9a8497f-3e95-4e0b-b251-0bebd310368b}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesPOJO\EntidadesPOJO.csproj">
+      <Project>{4308465c-3feb-4e69-ac1c-d71153d9b35d}</Project>
+      <Name>EntidadesPOJO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{be585c77-83ed-4f03-8429-85010470633d}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{B9A8497F-3E95-4E0B-B251-0BEBD310368B}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesPOJO\EntidadesPOJO.csproj">
+      <Project>{4308465C-3FEB-4E69-AC1C-D71153D9B35D}</Project>
+      <Name>EntidadesPOJO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{BE585C77-83ED-4F03-8429-85010470633D}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

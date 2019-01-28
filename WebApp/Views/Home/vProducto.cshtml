@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "vProducto";
+}
+
+<link href="~/Content/vProducto.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vProducto.js"></script>
+
+
+@Html.CtrlTable(viewName: "vProducto", id: "tblProductos", title: "Lista de productos",
+columnsTitle: "Codigo,Nombre de producto,Tipo de producto", ColumnsDataName: "CODIGO,NOMBRE,TIPO", onSelectFunction: "BindFields")
+
+@Html.CtrlAlert()
+
+<div id="opciones_CRUD">
+    @Html.CtrlButton(viewName: "vProducto", id: "btnMostrar", label: "Formulario", onClickFunction: "MostrarFormulario", buttonType: "success")
+    @Html.CtrlButton(viewName: "vProducto", id: "btnGuardar", label: "Guardar", onClickFunction: "Update", buttonType: "info")
+    @Html.CtrlButton(viewName: "vProducto", id: "btnBorrar", label: "Borrar", onClickFunction: "Delete", buttonType: "danger")
+</div>
+
+<div id="form_registrar_block">
+    <form id="frmRegistrarProducto" action="">
+        <div class="alert alert-dismissible div_hidden" id="show_message">
+            <span id="show_message_description"> </span>
+        </div>
+
+        <div class="form_registrar_float_left">
+            <div class="new_input_registrar">
+                @Html.CtrlInput(id: "txtNombre", type: "text", label: "Nombre del producto:", columnDataName: "NOMBRE")
+                @Html.CtrlSelect(id: "DropDownTipo", label: "Tipo:", servicio: "tipoproductos")
+
+            </div>
+        </div>
+
+        <div class="form_registrar_float_right">
+            <div class="new_input_registrar">
+                @Html.CtrlSelect(id: "DropDownCategorias", label: "Categorias:", servicio: "categorias")
+                @Html.CtrlSelect(id: "DropDownTiendas", label: "Tiendas:", servicio: "tienda")
+            </div>
+        </div>
+
+        <input class="div_hidden" id="txtUrlImagen" type="text" disabled columndataname="URL_FOTO_ID" />
+
+    </form>
+</div>
+
+
+<!--Prueba-->
+
+<dev Id="listaProductos">
+
+</dev>
+<button id="boton">Agrega contenido</button>
+<script>
+    $("#boton").click(function () {
+        var view = new vProducto();
+        if (view != undefined) {
+            view.IngresarProductos("<div class='ordenes_body'><div class='new_order'><div class='order_header'><span>Orden #1</span><span>Fecha de compra: 10/04/2018</span><span>Código de rastreo: CR2920A0AA9SJ</span></div><div class='order_body'><div class='order_image_preview'><img src='https://skin-tracker.com/images/fnskins/681.png' alt=''></div><div class='order_body_description'><div class='order_new_description'>Nombre del artículo:<span> Lorem ipsum dolor sit amet consectetur adipiscing elit eros nisi nibh</span></div><div class='order_new_description'>Descripción:<span> Lorem ipsum dolor sit amet consectetur adipiscing elit eros nisi nibh, semper posuere dui sapien arcu quam mauris vulputate. Nulla mi posuere donec dis tristique cursus lectus, porttitor conubia velit orci duis placerat ullamcorper risus, massa praesent purus fermentum maecenas facilisis. Proin ad est eros neque massa etiam sem, tempor quam rhoncus sed pretium hac purus consequat, cras facilisi porta taciti augue sociis. </span></div></div><div class='order_body_buttons'><span class='normal_icon'> Enviado <i class='fas fa-check-square'></i></span><span class='normal_icon'><i class='fas fa-map-marker-alt'></i> Rastrear</span><span class='normal_icon'><i class='fas fa-newspaper'></i> Factura</span><span class='normal_icon'><i class='fas fa-question-circle'></i> Ayuda</span><span class='normal_icon'><i class='fas fa-flag'></i> Reportar</span></div></div></div></div>");
+        }
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

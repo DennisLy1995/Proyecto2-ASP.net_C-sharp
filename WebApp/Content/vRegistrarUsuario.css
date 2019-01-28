@@ -1,0 +1,39 @@
+﻿#form_registrar_block {
+    padding: 15px;
+     width: 70%;
+    overflow: hidden;
+    text-align: center;
+ }
+
+
+.new_input_registrar label {
+     display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.new_input_registrar input {
+    margin-bottom: 10px;
+}
+
+.form_registrar_float_left {
+    float: left;
+}
+
+.form_registrar_float_right {
+    float: right;
+}
+
+.form_registrar_button{
+    width: 100%;
+     text-align:center;
+}
+
+.form_registrar_button button {
+    margin-top: 30px;
+ }
+.div_hidden{
+    display: none;
+}
+ 

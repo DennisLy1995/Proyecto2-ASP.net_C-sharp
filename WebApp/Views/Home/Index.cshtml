@@ -1,0 +1,8 @@
+﻿<!--/Home/vModEmpleados-->
+<script src="~/Scripts/Views/vRegEmpleados.js"></script>
+
+<form id="frmBuscar">
+    @Html.CtrlInput(id: "txtBuscar", type: "text", label: "Ingrese identificación", columnDataName: "BUSCAR")
+</form>
+
+@Html.CtrlButton(viewName: "vRegEmpleados", id: "btnRetrieve", label: "Buscar", onClickFunction: "ObtenerEmpleado(\"txtBuscar\")", buttonType: "success")

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "vRegistrarInventario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/registrar-inventario.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vRegistrarInventario.js"></script>
+<h2 class="h2Titulo">Inventario</h2>
+@Html.CtrlAlert()
+<div class="card border-secondary">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                @Html.CtrlButton(viewName: "vRegistrarInventario", id: "btnMostrarRegistro", label: "Registrar", onClickFunction: "MostrarFormRegistro", buttonType: "success")
+            </div>
+            <div class="col">
+                @Html.CtrlButton(viewName: "vRegistrarInventario", id: "btnMostrarModificar", label: "Actualizar", onClickFunction: "MostrarFormModificar", buttonType: "info")
+            </div>
+            <div class="col">
+                @Html.CtrlButton(viewName: "vRegistrarInventario", id: "btnOcultar", label: "Ocultar formulario", onClickFunction: "OcultarForms", buttonType: "info")
+            </div>
+        </div>
+    </div>
+    <form id="frmInventario" class="oculto">
+        <div class="divZonaIzquierda">
+            <div class="form-group">
+                <label for="sltProducto">Producto</label>
+                <select class="form-control" id="sltProducto">
+                    <option value="">--Seleccione una opción--</option>
+                </select>
+            </div>
+            @Html.CtrlSelect(id: "sltProveedor", label: "Proveedor", servicio: "usuario")
+            @Html.CtrlInput(id: "txtCantidad", type: "number", label: "Cantidad", columnDataName: "Cantidad")
+        </div>
+        <div class="divZonaDerecha">
+            @Html.CtrlInput(id: "txtFechaEntrada", type: "date", label: "Fecha entrada", columnDataName: "FechaEntrada")
+            @Html.CtrlInput(id: "txtPrecioUnidad", type: "number", label: "Precio unidad", columnDataName: "PrecioUnidad")
+            @Html.CtrlInput(id: "txtImpuesto", type: "number", label: "Impuesto", columnDataName: "Impuesto")
+        </div>
+        <div id="boton-registrar" class="divZonaAbajo oculto">
+            @Html.CtrlButton(viewName: "vRegistrarInventario", id: "btnRegistrar", label: "Registrar", onClickFunction: "OpcionRegistrar")
+        </div>
+        <div id="boton-modificar" class="divZonaAbajo oculto">
+            @Html.CtrlButton(viewName: "vRegistrarInventario", id: "btnModificar", label: "Modificar", onClickFunction: "OpcionModificar")
+        </div>
+    </form>
+</div>
+
+    @Html.CtrlTable(viewName: "vRegistrarInventario", id: "tbl_inventarios", title: "Inventario",
+        columnsTitle: "Producto,Cantidad,Precio,Fecha entrada,Impuesto,Proveedor", ColumnsDataName: "IdProducto,Cantidad,PrecioUnidad,FechaEntrada,Impuesto,IdProveedor", onSelectFunction: "BindFields")
+
+
+
+
+

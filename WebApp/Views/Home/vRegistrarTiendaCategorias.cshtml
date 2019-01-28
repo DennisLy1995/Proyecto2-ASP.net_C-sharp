@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "vRegistrarTiendaCategorias";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/registrarDistribuidorTienda.css" rel="stylesheet" />
+<script src="~/Scripts/Views/vRegistrarTiendaCategorias.js"></script>
+<h2> Registrar categorías</h2>
+@Html.CtrlButton(viewName: "vRegistrarTiendaCategorias", id: "btnListo", label: "¡Listo! <i class='fas fa-chevron-right'></i>", onClickFunction: "Listo", buttonType: "success")
+<div class="clearfix"></div>
+<p class="lead">Seleccione las categorías de su tienda</p>
+
+<form id="frmRegistrarTiendaCategoria">
+    @Html.CtrlAlert()
+    <div class="divZonaIzquierdaIzquierda">
+        <input type="text" class="form-control" id="txtCodigo" disabled placeholder="Código" columndataname="CODIGO">
+    </div>
+    <div class="divZonaIzquierda">
+        <input type="text" class="form-control" id="txtNombre" disabled placeholder="Categoría" columndataname="NOMBRE">
+    </div>
+    @Html.CtrlButton(viewName: "vRegistrarTiendaCategorias", id: "btnRegistrar", label: "Registrar categoría", onClickFunction: "ValidarInputs")
+</form>
+<div class="clearfix"></div>
+
+@Html.CtrlTable(viewName: "vRegistrarTiendaCategorias", id: "tbl_categorias", title: "Categorías",
+    columnsTitle: "Código,Nombre", ColumnsDataName: "CODIGO,NOMBRE", onSelectFunction: "BindFields");
+

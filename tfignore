@@ -1,8 +1,0 @@
-#Ignore all files in the .vs sub-folder
-/.vs
-#Ignore all files in the bin sub-folder
-/bin
-#Ignore all files in the package sub-folder
-/package
-#Ignore all files in the packages sub-folder
-/packages

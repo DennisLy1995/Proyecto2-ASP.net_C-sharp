@@ -13,8 +13,8 @@ namespace WebApp.Models.Controls
 
         private string ReadFileText()
         {
-            //string path = @"C:\Users\Demo User\Desktop\Proyecto 2\Proyecto\Dennis\WebApp\Models\Controls\";
-            string path = @"C:\Users\Dennis Ly\Desktop\Punto NET\Proyectos\Proyecto final - proyecto 2\Dennis\WebApp\Models\Controls\";
+
+            string path = @"C:\Users\Denni\Desktop\Proyecto 2 - Evotek\WebApp\Models\Controls\";
             string fileName = this.GetType().Name + ".html";
 
             path = path + fileName;
